@@ -1,0 +1,10 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	POLL1             3000
+//	KBSRPtr           3003
+//	KBDRPtr           3004
+//	DSRPtr            3005
+//	DDRPtr            3006
+
