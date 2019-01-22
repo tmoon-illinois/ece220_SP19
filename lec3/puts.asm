@@ -1,0 +1,10 @@
+	.ORIG	x3000
+	LEA	R0,STRING
+	PUTS	;print "test"
+	LEA	R0,STRING2
+	PUTSP	;print "AB"
+	HALT
+
+STRING	.STRINGZ	"test"
+STRING2	.FILL	x4241
+	.END
