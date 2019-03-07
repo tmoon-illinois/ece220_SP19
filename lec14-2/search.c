@@ -3,6 +3,7 @@
 void print_array(int array[], int n);
 int linearSearch(int array[], int n, int key);
 int binarySearch(int array[], int n, int key);
+int binarySearch_rec(int array[], int key, int low, int high);
 int main()
 {
     int array[] = {11,12,22,25,32,66};
@@ -16,7 +17,7 @@ int main()
     printf("ENter key value: ");
     scanf("%d", &key);
 
-    found = linearSearch(array,SIZE,key);
+    //found = linearSearch(array,SIZE,key);
     found = binarySearch(array,SIZE,key);
 
     if(found ==-1)
@@ -24,6 +25,11 @@ int main()
     else
         printf("Found key at index %d\n", found);
 
+    found = binarySearch_rec(array,key, 0, n-1);
+    if(found ==-1)
+        printf("Rec: Key is not found\n");
+    else
+        printf("Rec: Found key at index %d\n", found);
 
 }
 
@@ -70,6 +76,28 @@ int binarySearch(int array[], int n, int key)
     }
     return -1;
 }
+int binarySearch_rec(int array[], int key, int low, int high)
+{
+    int mid;
+
+    if(low > high)
+        return -1;
+
+    mid = (low+high)/2;
+    if(array[mid] ==  key)
+        return mid;
+    else if(array[mid] < key)
+        return binarySearch_rec(array, key, mid+1, high);
+    else 
+        return binarySearch_rec(array, key, low, mid-1);
+}
+
+
+
+
+
+
+
 
 
 

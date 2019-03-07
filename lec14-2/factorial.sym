@@ -1,0 +1,14 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	FACTORIAL         3008
+//	ELSE              301F
+//	RETURN            3022
+//	MULT              302A
+//	MULT_LOOP         302D
+//	MULT_DONE         3031
+//	SAVE_R3           3033
+//	SAVE_R7           3034
+//	STACK_TOP         3035
+
